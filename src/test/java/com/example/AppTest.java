@@ -28,19 +28,34 @@ public class AppTest {
     @Container
     public BrowserWebDriverContainer browser = 
         new BrowserWebDriverContainer<>()
-            .withRecordingMode(RECORD_ALL, Paths.get(".", "target").toFile())
+            .withRecordingMode(
+                RECORD_ALL, 
+                Paths.get(".", "target").toFile())
             .withCapabilities(new FirefoxOptions());
 
     @Test
-    public void shouldAnswerWithTrue() {
+    public void selenideShouldExist() {
 
-        RemoteWebDriver remote = new RemoteWebDriver(browser.getSeleniumAddress(), new FirefoxOptions());
+        RemoteWebDriver remote = 
+            new RemoteWebDriver(
+                browser.getSeleniumAddress(), 
+                new FirefoxOptions());
+
         WebDriverRunner.setWebDriver(remote);
 
 
         open("https://google.com?q=selenide");
-        $$("form").filterBy(exist).first().shouldBe(visible).submit();
-        $(byValue("selenide")).shouldBe(exist).shouldBe(visible).submit();
+
+        $$("form")
+            .filterBy(exist)
+            .first()
+            .shouldBe(visible)
+            .submit();
+
+        $(byValue("selenide"))
+            .shouldBe(exist)
+            .shouldBe(visible)
+            .submit();
 
 
     }
