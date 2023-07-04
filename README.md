@@ -78,4 +78,5 @@ In addition to [Testcontainers dependencies](https://github.com/gabrielcostasilv
 2. Open your terminal, and from the project folder run `mvn test`
 3. Check out the test result and the video saved at `target/` folder
 
-
+## Further References
+- [Automated E2E testing with Testcontainers and Selenium](https://luizcostatech.medium.com/automated-e2e-testing-with-testcontainers-and-selenium-df734a502832) is a tutorial for a very first experience using both technologies together.
