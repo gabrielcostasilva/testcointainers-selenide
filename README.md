@@ -9,6 +9,8 @@ In my opinion, Selenide simplifies a lot the browser automation.
 
 > Check out our [_hello-world project_](https://github.com/gabrielcostasilva/testcontainers-hello-world.git) to get started with Testcontainers.
 
+> Check out [this branch](https://github.com/gabrielcostasilva/testcontainers-spring/tree/selenide-selenium-grid) to see how to use Selenide with Spring Boot
+
 ## Overview
 This project consist of a single test class ([AppTest](./src/test/java/com/example/AppTest.java)). The test uses Testcontainers/Selenide to run a Google search. The Figure below shows the automated process as recorded by Selenide.
 
